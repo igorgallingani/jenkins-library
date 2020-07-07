@@ -225,6 +225,7 @@ void call(Map parameters = [:]) {
             parameters['space'] = config.cloudFoundry.space
             parameters['username'] = username
             parameters['manifest'] = config.cloudFoundry.manifest
+            parameters['appName'] = 'hugo'
             piperExecuteBin(parameters, STEP_NAME, METADATA_FILE, [])
             echo "dbg>> after cf deploy"
         }
